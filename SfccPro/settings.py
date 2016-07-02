@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import getpass
 import os
+import socket
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,11 +28,11 @@ IS_PRODUCTION = 'ec2-user' == getpass.getuser()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if IS_PRODUCTION:
-    DEBUG = True
-else:
     DEBUG = False
-
-ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = [socket.gethostname()]
+else:
+    DEBUG = True
+    ALLOWED_HOSTS = []
 
 
 # Application definition
