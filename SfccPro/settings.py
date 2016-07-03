@@ -45,13 +45,32 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # All auth
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+
+    # Django bower
+    'schedule',
+    'djangobower',
 ]
+
+
+# Django bower
+STATICFILE_FINDERS = (
+    'djangobower.finders.BowerFinder',
+)
+
+BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
+
+BOWER_INSTALLED_APPS = (
+    'jquery',
+    'bootstrap',
+)
+
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -81,6 +100,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # 'allauth.account.context_processors.account',
                 # 'allauth.socialaccount.context_processors.socialaccount',
+                'django.core.context_processors.request',
             ],
         },
     },
@@ -112,6 +132,7 @@ AUTHENTICATION_BACKENDS = (
 
 # PK/ID of the site which you would like to use.
 # TODO: what if I want to use multiple? i.e., Facebook in addition to Google?
+# TODO: do I need to manually make this the correct value on production DB?
 SITE_ID = 3
 
 LOGIN_REDIRECT_URL = '/'
