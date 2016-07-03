@@ -114,6 +114,9 @@ AUTHENTICATION_BACKENDS = (
 # TODO: what if I want to use multiple? i.e., Facebook in addition to Google?
 SITE_ID = 3
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 
