@@ -16,8 +16,11 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+from SfccPro.views import Home
 
-    url(r'^accounts/', include('allauth.urls'))
+
+urlpatterns = [
+    url(r'^$', Home.as_view(), name='home'),
+    url(r'^accounts/', include('allauth.urls')),
+    url(r'^admin/', admin.site.urls),
 ]
