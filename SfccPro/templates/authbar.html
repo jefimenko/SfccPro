@@ -1,0 +1,15 @@
+
+{% if not request.user.is_authenticated %}
+
+<div>
+    <a href="{% url 'account_login' %}">Login</a>
+</div>
+
+{% else %}
+
+<div>
+    {{ request.user }}
+    <a href="{% url 'account_logout' %}">Logout</a>
+</div>
+
+{% endif %}
