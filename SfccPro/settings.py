@@ -133,7 +133,7 @@ AUTHENTICATION_BACKENDS = (
 # PK/ID of the site which you would like to use.
 # TODO: what if I want to use multiple? i.e., Facebook in addition to Google?
 # TODO: do I need to manually make this the correct value on production DB?
-SITE_ID = 3
+SITE_ID = 4
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
