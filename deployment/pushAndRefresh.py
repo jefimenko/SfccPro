@@ -14,3 +14,5 @@ if __name__ == '__main__':
 
     utils.remoteMkdir(user_name, host_name, target_base_dir)
     utils.rsync(user_name, host_name, source_dir, target_base_dir, ignore=['db.sqllite3'])
+
+    # TODO: Add start/restart
