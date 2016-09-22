@@ -2,11 +2,8 @@ import os
 import subprocess
 
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-def rsync(user_name, host_name, target_base_dir):
-    command = ['rsync', '-azv', BASE_DIR, '{}@{}:{}'.format(user_name, host_name, target_base_dir)]
+def rsync(user_name, host_name, source_dir, target_base_dir):
+    command = ['rsync', '-azv', source_dir, '{}@{}:{}'.format(user_name, host_name, target_base_dir)]
     print ' '.join(command)
 
     return subprocess.call(command)
