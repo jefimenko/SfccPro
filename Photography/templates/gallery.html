@@ -15,8 +15,7 @@
 {% for thumbnail_url, fullsize_url in presigned_urls %}
 <div class='gallery-tiles'>
   <a class='gallery-links' href="{{ fullsize_url }}">
-    <span class="gallery-images" style="background-image: url('{{ thumbnail_url }}')">
-    </span>
+    <img class="gallery-images" src="{{ thumbnail_url }}" />
   </a>
 </div>
 {% endfor %}
