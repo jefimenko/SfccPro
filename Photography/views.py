@@ -8,13 +8,17 @@ from django.views.generic import TemplateView, View
 import boto
 
 from Photography import views_helpers
+import aws_secrets
 
 
 class Gallery(TemplateView):
 
     def get(self, request):
-        s3 = boto.s3.connect_to_region('us-west-2')
-
+        s3 = boto.s3.connect_to_region(
+            'us-west-2',
+            aws_access_key_id=aws_secrets.AWS_ACCESS_KEY_ID,
+            aws_secret_access_key=aws_secrets.AWS_SECRET_ACCESS_KEY
+        )
         bucket = s3.get_bucket('seattlefcc-photos')
 
         thumbnail_urls = [
@@ -40,7 +44,11 @@ class Thumbnails(View):
             return JsonResponse({'status': 'error', 'message': 'Missing file_name'} , status=400)
 
         # Get image from S3
-        s3 = boto.s3.connect_to_region('us-west-2')
+        s3 = boto.s3.connect_to_region(
+            'us-west-2',
+            aws_access_key_id=aws_secrets.AWS_ACCESS_KEY_ID,
+            aws_secret_access_key=aws_secrets.AWS_SECRET_ACCESS_KEY
+        )
         bucket = s3.get_bucket('seattlefcc-photos')
         key = bucket.get_key(os.path.join('gallery', 'fullsize', file_name))
 
