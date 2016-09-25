@@ -11,6 +11,7 @@
 
 
 {% block main_block %}
+
 {% for presigned_url in presigned_urls %}
 <div class='gallery-tiles'>
   <a class='gallery-links' href="{{ presigned_url }}">
@@ -19,4 +20,5 @@
   </a>
 </div>
 {% endfor %}
+
 {% endblock %}
