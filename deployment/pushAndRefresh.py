@@ -14,4 +14,4 @@ if __name__ == '__main__':
 
     utils.rsync(user_name, host_name, source_dir, target_parent_dir, ignore=['db.sqllite3'])
 
-    # TODO: Add start/restart
+    utils.remoteApache2(user_name, host_name, 'restart')
