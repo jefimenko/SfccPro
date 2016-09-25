@@ -7,8 +7,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, View
 import boto
 
+from common import aws_secrets
 from Photography import views_helpers
-import aws_secrets
 
 
 class Gallery(TemplateView):
