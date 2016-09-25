@@ -17,14 +17,17 @@ class Gallery(TemplateView):
 
         bucket = s3.get_bucket('seattlefcc-photos')
 
-        presigned_urls = [
+        thumbnail_urls = [
             s3.generate_url(method='GET', bucket=bucket.name, key=key.name, expires_in=20000000 , force_http=True)
-            for key in bucket.list(prefix='gallery/thumbnails')
+            for key in bucket.list(prefix='gallery/thumbnails/400')
         ][1:]
 
-        # TODO: crop/resize images?
+        fullsize_urls = [
+            s3.generate_url(method='GET', bucket=bucket.name, key=key.name, expires_in=20000000 , force_http=True)
+            for key in bucket.list(prefix='gallery/fullsize')
+        ][1:]
 
-        return render(request, 'Photography/templates/gallery.html', context={'presigned_urls': presigned_urls})
+        return render(request, 'Photography/templates/gallery.html', context={'presigned_urls': zip(thumbnail_urls, fullsize_urls)})
 
 class Thumbnails(View):
 

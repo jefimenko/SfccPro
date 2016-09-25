@@ -18,7 +18,7 @@ def generateLocalThumbnailFileName(prefix, local_original_image_file_name):
     return os.path.join(
         os.path.dirname(local_original_image_file_name),
         prefix,
-        os.path.basename(local_original_image_file_name) + '.' + prefix
+        os.path.basename(local_original_image_file_name)
     )
 
 
@@ -31,4 +31,5 @@ def saveThumbnailToS3FromFileName(bucket, prefix, thumbnail_file_name):
     )
 
     thumbnail_key = bucket.new_key(thumbnail_key_name)
+    thumbnail_key.content_type = 'image/jpeg'
     thumbnail_key.set_contents_from_filename(thumbnail_file_name)
