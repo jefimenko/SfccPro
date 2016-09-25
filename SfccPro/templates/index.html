@@ -12,8 +12,8 @@
 
 {% block main_block %}
 
-<div id="banner-div" style="display:block; width:100%; height:800px; background-image:url({{ banner_image_url }}); background-position: center center; background-size:100%;">
-</div>
+<!-- <div id="banner-div" style="display:block; width:100%; height:800px; background-image:url({{ banner_image_url }}); background-position: center center; background-size:100%;">
+</div> -->
 
 <!-- <div class="home-card">
 Welcoming
@@ -24,7 +24,7 @@ Scheduling
 </div>
  -->
 <div class="home-card">
-  <a href="photos">Photography</a>
+  <a href="{% url 'Photography.gallery' %}">Photography</a>
 </div>
 
 <!-- <div class="home-card">

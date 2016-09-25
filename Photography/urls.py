@@ -5,6 +5,6 @@ from Photography.views import Gallery, Thumbnails
 
 
 urlpatterns = [
-    url(r'^$', Gallery.as_view(), name='gallery'),
-    url(r'^thumbnails/?$', csrf_exempt(Thumbnails.as_view()), name='thumbnails'),
+    url(r'^$', Gallery.as_view(), name='Photography.gallery'),
+    url(r'^thumbnails/?$', csrf_exempt(Thumbnails.as_view()), name='Photography.thumbnails'),
 ]
