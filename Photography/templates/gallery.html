@@ -1,0 +1,22 @@
+{% extends 'SfccPro/templates/layout.html' %}
+{% load static %}
+
+
+{% block style_block %}
+{{ block.super }}
+
+<link rel="stylesheet" type="text/css" href="/Photography/css/gallery.css" />
+
+{% endblock %}
+
+
+{% block main_block %}
+{% for presigned_url in presigned_urls %}
+<div class='gallery-tiles'>
+  <a class='gallery-links' href="{{ presigned_url }}">
+    <span class="gallery-images" style="background-image: url('{{ presigned_url }}')">
+    </span>
+  </a>
+</div>
+{% endfor %}
+{% endblock %}

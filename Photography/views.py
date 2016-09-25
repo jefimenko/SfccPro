@@ -20,4 +20,6 @@ class Gallery(TemplateView):
             for key in bucket.list(prefix='gallery')
         ][1:]
 
+        # TODO: crop/resize images?
+
         return render(request, 'Photography/templates/gallery.html', context={'presigned_urls': presigned_urls})

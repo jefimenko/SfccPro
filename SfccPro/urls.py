@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^$', Home.as_view(), name='home'),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^photos/', include('Photography.urls')),
 ]
