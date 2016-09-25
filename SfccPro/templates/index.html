@@ -1,12 +1,19 @@
-{% extends 'SfccPro/templates/layout.html' %}
-
+{% extends 'templates/layout.html' %}
+{% load static %}
 
 {% block style_block %}
 {{ block.super }}
+
+<link rel="stylesheet" type="text/css" href="/SfccPro/css/index.css" style=""/>
+
 {% endblock %}
 
 
 {% block main_block %}
+
+<div id="banner-div" style="display:block; width:100%; height:800px; background-image:url({{ banner_image_url }}); background-position: center center; background-size:100%;">
+</div>
+
 <div class="home-card">
 Welcoming
 </div>  
