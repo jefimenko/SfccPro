@@ -15,3 +15,9 @@ def remoteMkdir(user_name, host_name, target_dir):
     print(' '.join(command))
 
     return subprocess.call(command)
+
+def remoteApache2(user_name, host_name, apache2_command):
+    command = ['ssh', '{}@{}'.format(user_name, host_name), 'sudo service apache2 {}'.format(apache2_command)]
+    print(' '.join(command))
+
+    subprocess.call(command)
