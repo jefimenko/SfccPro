@@ -1,11 +1,11 @@
-{% extends 'SfccPro/templates/layout.html' %}
+{% extends 'templates/layout.html' %}
 {% load static %}
 
 
 {% block style_block %}
 {{ block.super }}
 
-<link rel="stylesheet" type="text/css" href="/Photography/css/gallery.css" />
+<link rel="stylesheet" type="text/css" href="{% static "gallery.css" }"/>
 
 {% endblock %}
 
