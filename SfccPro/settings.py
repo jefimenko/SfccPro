@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'r6*&b87e(@b!u2(m3e2kjl#e8ldm#^ly1g_ueu(6d1(=tzvde!'
 
-IS_PRODUCTION = 'ec2-user' == getpass.getuser()
+IS_PRODUCTION = os.environ.get('SERVERTYPE') == 'production'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if IS_PRODUCTION:
@@ -61,6 +61,8 @@ INSTALLED_APPS = [
 
 # Django bower
 STATICFILE_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'djangobower.finders.BowerFinder',
 )
 
@@ -100,7 +102,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # 'allauth.account.context_processors.account',
                 # 'allauth.socialaccount.context_processors.socialaccount',
-                'django.core.context_processors.request',
+                # 'django.core.context_processors.request',
             ],
         },
     },
@@ -174,4 +176,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' 
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = [
+    ('css', os.path.join(STATIC_ROOT, 'css')),
+
+    ('Photography', os.path.join(BASE_DIR, 'Photography/static')),
+    ('SfccPro', os.path.join(BASE_DIR, 'SfccPro/static')),
+]
+
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

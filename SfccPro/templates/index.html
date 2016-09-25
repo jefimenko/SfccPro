@@ -1,10 +1,11 @@
 {% extends 'templates/layout.html' %}
 {% load static %}
 
+
 {% block style_block %}
 {{ block.super }}
 
-<link rel="stylesheet" type="text/css" href="/SfccPro/css/index.css" style=""/>
+<link rel="stylesheet" type="text/css" href="{% static "SfccPro/css/index.css" %}" />
 
 {% endblock %}
 
@@ -33,4 +34,5 @@ SFCC Shuttle
 <div class="home-card">
 Soundtech
 </div>
+
 {% endblock %}
