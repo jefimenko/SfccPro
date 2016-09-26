@@ -1,5 +1,5 @@
 *_secrets.py
-
 *.pyc
+*.sqlite3
 
 static
