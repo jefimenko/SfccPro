@@ -36,9 +36,14 @@ SFCC
 {% endblock %}
 
 
+
+{% if request.path != '/'%}
+
 {% block navbar_block %}
 {% include 'templates/navbar.html' %}
 {% endblock %}
+
+{% endif %}
 
 </body>
 </html>
