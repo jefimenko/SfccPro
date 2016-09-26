@@ -131,6 +131,16 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
+
+# Registration
+
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = True
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
 # PK/ID of the site which you would like to use.
 # TODO: what if I want to use multiple? i.e., Facebook in addition to Google?
 # TODO: do I need to manually make this the correct value on production DB?
@@ -190,3 +200,17 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Email
+from common import email_secrets
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = email_secrets.TEMP_EMAIL_ADDRESS
+EMAIL_HOST_PASSWORD = email_secrets.TEMP_PASSWORD
+
+# Can I specify user/password during runtime per email sent?
