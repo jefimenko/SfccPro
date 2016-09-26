@@ -1,11 +1,11 @@
-<div class="authbar">
-  <a href="{% url 'SfccPro.Home' %}">Home</a>
-</div>
-
 {% if not request.user.is_authenticated %}
 
 <div class="authbar">
   <a href="{% url 'account_login' %}">Login</a>
+</div>
+
+<div class="authbar">
+  <a href="">Profile</a>
 </div>
 
 <div class="authbar">
