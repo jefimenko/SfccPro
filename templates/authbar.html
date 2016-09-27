@@ -5,17 +5,19 @@
 </div>
 
 <div class="authbar">
-  <a href="">Profile</a>
-</div>
-
-<div class="authbar">
   <a href="{% url 'account_signup' %}">Register</a>
 </div>
 
 {% else %}
-
 <div class="authbar">
   {{ request.user }}
+</div>
+
+<div class="authbar">
+  <a href="">Profile</a>
+</div>
+
+<div class="authbar">
   <a href="{% url 'account_logout' %}">Logout</a>
 </div>
 
