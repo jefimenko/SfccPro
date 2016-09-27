@@ -1,15 +1,7 @@
-.navbar .navbar-nav {
-  display: inline-block;
-
-  float: none;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
 #navigation {
   height: 100px;
+
+  text-align: center;
 }
 
 .navigation-links {
@@ -18,6 +10,7 @@
 }
 
 .navigation-container {
-  margin-top: 25px;
   height: 100px;
+
+  margin-top: 25px;
 }

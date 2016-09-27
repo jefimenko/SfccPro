@@ -1,15 +1,10 @@
-.navbar .navbar-nav {
-  display: inline-block;
+#authentication {
+  height: 50px;
 
-  float: none;
-}
-
-.navbar .navbar-collapse {
   text-align: center;
 }
 
-#authentication {
-  width: 100%;
+.authentication-container {
   height: 50px;
 }
 

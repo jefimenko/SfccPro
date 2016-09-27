@@ -1,11 +1,21 @@
 #gallery-main-block {
   width: 100%;
 
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   text-align: center;
 }
 
 #gallery-justifier {
   display: inline-block;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .gallery-tiles {
@@ -20,11 +30,6 @@
 }
 
 .gallery-images {
-  margin: 0;
-  padding: 0;
-
-  position: relative;
-
   transition: all .2s ease-in-out;
 }
 
