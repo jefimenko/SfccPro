@@ -15,4 +15,10 @@
   padding: 0;
 
   position: relative;
+
+  transition: all .2s ease-in-out;
+}
+
+.gallery-images:hover {
+  transform: scale(1.1);
 }
