@@ -15,7 +15,7 @@
 {% for thumbnail_url, fullsize_url in presigned_urls %}
 <div class='gallery-tiles'>
   <a class='gallery-links' href="{{ fullsize_url }}">
-    <img class="gallery-images" src="{{ thumbnail_url }}" />
+    <img onload="this.style.opacity='1';" class="gallery-images" src="{{ thumbnail_url }}" />
   </a>
 </div>
 {% endfor %}
