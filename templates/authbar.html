@@ -1,24 +1,36 @@
-{% if not request.user.is_authenticated %}
+<nav id="authentication" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
 
-<div class="authbar">
-  <a href="{% url 'account_login' %}">Login</a>
-</div>
+    {% if not request.user.is_authenticated %}
 
-<div class="authbar">
-  <a href="{% url 'account_signup' %}">Register</a>
-</div>
+    <div class="authbar collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="{% url 'account_login' %}">Login</a>
+        </li>
+        <li>
+          <a href="{% url 'account_signup' %}">Register</a>
+        </li>
+      </ul>
+    </div>
 
-{% else %}
-<div class="authbar">
-  {{ request.user }}
-</div>
+    {% else %}
 
-<div class="authbar">
-  <a href="">Profile</a>
-</div>
+    <div class="authbar collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          {{ request.user }}
+        </li>
+        <li>
+          <a href="">Profile</a>
+        </li>
+        <li>
+          <a href="{% url 'account_logout' %}">Logout</a>
+        </li>
+      </ul>
+    </div>
 
-<div class="authbar">
-  <a href="{% url 'account_logout' %}">Logout</a>
-</div>
+    {% endif %}
 
-{% endif %}
+  </div>
+</nav>
