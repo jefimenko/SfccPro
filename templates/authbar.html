@@ -19,11 +19,11 @@
     <div class="authentication collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <span id="authentication-user-name-display">{{ request.user }}</span>
+          <span id="authentication-user-name-display">Logged in as <a href="">{{ request.user }}</a></span>
         </li>
-        <li>
-          <a class="authentication-links" href="">Profile</a>
-        </li>
+<!--         <li>
+          <a class="authentication-links" href="">Edit profile</a>
+        </li> -->
         <li>
           <a class="authentication-links" href="{% url 'account_logout' %}">Log out</a>
         </li>
