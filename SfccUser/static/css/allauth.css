@@ -1,3 +1,11 @@
+.form-group {
+  display: inline-block;
+
+  width: 100%;
+
+  text-align: center;
+}
+
 .allauth-headers {
   font-family: "Beautiful ES";
   font-size: 6em;
@@ -31,6 +39,8 @@
 
   font-size: 1em;
   font-weight: normal;
+
+  text-align: right;
 }
 
 .allauth-form-checkbox-input {
@@ -45,14 +55,30 @@
 #forgot-password {
   display: inline-block;
 
-  width: 462px;
+  width: 332px;
+
+  margin-right: 130px;
+
+  text-align: right;
+}
+
+#allauth-main-block {
+  width: 100%;
+
+  padding-top: 50px;
 
   text-align: center;
 }
 
-#allauth-main-block {
-  padding-top: 50px;
-  text-align: center;
+#allauth-signup-form{
+  width: 100%;
+}
+
+#allauth-login-form {
+  width: 100%;
+
+  margin-top: 30px;
+  margin-left: -2px;
 }
 
 .allauth-btn {
