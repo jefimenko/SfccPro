@@ -1,14 +1,15 @@
+.navbar .navbar-nav {
+  display: inline-block;
+
+  float: none;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
 #navigation {
-  width: 100%;
   height: 100px;
-}
-
-.navigation {
-  width: 100%;
-}
-
-.navigation ul {
-  width: 100%;
 }
 
 .navigation-links {
