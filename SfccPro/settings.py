@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'SfccUser',
+
     # All auth
     'django.contrib.sites',
     'allauth',
@@ -196,6 +198,7 @@ STATICFILES_DIRS = [
 
     ('Photography', os.path.join(BASE_DIR, 'Photography/static')),
     ('SfccPro', os.path.join(BASE_DIR, 'SfccPro/static')),
+    ('SfccUser', os.path.join(BASE_DIR, 'SfccUser/static')),
 ]
 
 

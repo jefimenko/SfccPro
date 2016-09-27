@@ -1,0 +1,75 @@
+.allauth-headers {
+  font-family: "Beautiful ES";
+  font-size: 6em;
+}
+
+.allauth-form-label {
+  display: inline-block;
+
+  width: 130px;
+
+  font-size: 1em;
+  font-weight: normal;
+
+  text-align: right;
+}
+
+.allauth-form-input {
+  display: inline-block;
+
+  width: 350px;
+
+  margin-right: 130px;
+
+  font-size: 1em;
+}
+
+.allauth-form-checkbox-label {
+  display: inline-block;
+
+  width: 130px;
+
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.allauth-form-checkbox-input {
+  display: inline-block;
+
+  width: 13px;
+  height: 13px;
+
+  vertical-align: middle;
+}
+
+#forgot-password {
+  display: inline-block;
+
+  width: 462px;
+
+  text-align: center;
+}
+
+#allauth-main-block {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.allauth-btn {
+  width: 350px;
+
+  margin-left: 130px;
+  margin-right: 130px;
+
+  background-color: #CACACA;
+  color: #202020;
+}
+
+.allauth-btn:hover {
+  background-color: #AAAAAA;
+  color: #090909  ;
+}
+
+#allauth-confirm-btn {
+  margin-top: 25px;
+}
