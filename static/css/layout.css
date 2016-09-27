@@ -1,6 +1,12 @@
 @font-face {
-  font-family:"Beautiful ES";
+  font-family: "Beautiful ES";
   src: url("/static/fonts/Beautiful_ES/BEAUE___.eot?") format("eot"),url("/static/fonts/Beautiful_ES/BEAUE___.woff") format("woff"),url("/static/fonts/Beautiful_ES/BEAUE___.ttf") format("truetype"),url("/static/fonts/Beautiful_ES/BEAUE___.svg#BeautifulES") format("svg");
+  font-weight:normal;font-style:normal;
+}
+
+@font-face {
+  font-family: "Easy Street Alt EPS";
+  src: url("/static/fonts/Easy_Street_Alt_EPS/Easy_Street_Alt_EPS.eot?") format("eot"), url("/static/fonts/Easy_Street_Alt_EPS/Easy_Street_Alt_EPS.woff") format("woff"), url("/static/fonts/Easy_Street_Alt_EPS/Easy_Street_Alt_EPS.ttf") format("truetype"), url("/static/fonts/Easy_Street_Alt_EPS/Easy_Street_Alt_EPS.svg#") format("svg");
   font-weight:normal;font-style:normal;
 }
 
