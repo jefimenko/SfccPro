@@ -13,6 +13,14 @@
   height: 50px;
 }
 
+#authentication-user-name-display {
+  display :inline-block;
+
+  padding: 15px;
+
+  font-size: 1em;
+}
+
 .authentication-links {
   font-family: "Easy Street Alt EPS";
   font-size: 2em;
