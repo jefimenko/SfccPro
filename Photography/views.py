@@ -36,7 +36,6 @@ class Gallery(TemplateView):
             'Photography/templates/gallery.html',
             context={
                 'presigned_urls': zip(thumbnail_urls, fullsize_urls),
-                'justifier_width': (400 + 23) * 4,
             }
         )
 
