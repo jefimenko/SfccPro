@@ -12,12 +12,17 @@
 
 {% block main_block %}
 
-{% for thumbnail_url, fullsize_url in presigned_urls %}
-<div class='gallery-tiles'>
-  <a class='gallery-links' href="{{ fullsize_url }}">
-    <img onload="this.style.opacity='1';" class="gallery-images" src="{{ thumbnail_url }}" />
-  </a>
+<div id="gallery-main-block">
+  <div id="gallery-justifier"  style="width: {{ thumbnail_size }};">
+    {% for thumbnail_url, fullsize_url in presigned_urls %}
+    <div class="gallery-tiles">
+      <a class="gallery-links" href="{{ fullsize_url }}">
+        <img onload="this.style.opacity='1';" class="gallery-images" src="{{ thumbnail_url }}" />
+      </a>
+    </div>
+    {% endfor %}
+
+  </div>
 </div>
-{% endfor %}
 
 {% endblock %}

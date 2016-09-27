@@ -31,7 +31,14 @@ class Gallery(TemplateView):
             for key in bucket.list(prefix='gallery/fullsize')
         ][1:]
 
-        return render(request, 'Photography/templates/gallery.html', context={'presigned_urls': zip(thumbnail_urls, fullsize_urls)})
+        return render(
+            request,
+            'Photography/templates/gallery.html',
+            context={
+                'presigned_urls': zip(thumbnail_urls, fullsize_urls),
+                'justifier_width': (400 + 23) * 4,
+            }
+        )
 
 class Thumbnails(View):
 
