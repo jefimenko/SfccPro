@@ -12,27 +12,33 @@
 
 {% block main_block %}
 
-<!-- <div id="banner-div" style="display:block; width:100%; height:800px; background-image:url({{ banner_image_url }}); background-position: center center; background-size:100%;">
-</div> -->
-
-<!-- <div class="home-card">
-Welcoming
-</div> -->
-
-<!-- <div class="home-card">
-Scheduling
-</div>
- -->
-<div class="home-card">
-  <a href="{% url 'Photography.gallery' %}">Photography</a>
+<div class="home-cards">
+  <a class="home-card-links" href="">Events</a>
 </div>
 
-<!-- <div class="home-card">
-SFCC Shuttle
-</div> -->
-
-<div class="home-card">
-Soundtech
+<div class="home-cards">
+  <a class="home-card-links" href="">Announcements</a>
 </div>
+
+<div class="home-cards">
+  <a class="home-card-links" href="">Scheduling</a>
+</div>
+
+<div class="home-cards">
+  <a class="home-card-links" href="">Welcoming</a>
+</div>
+
+<div class="home-cards container">
+  <a class="home-card-links" href="{% url 'Photography.gallery' %}">Photography</a>
+</div>
+
+<div class="home-cards container">
+  <a class="home-card-links" href="">Soundtech</a>
+</div>
+
+<div class="home-cards">
+  <a class="home-card-links" href="">SFCC Shuttle</a>
+</div>
+
 
 {% endblock %}

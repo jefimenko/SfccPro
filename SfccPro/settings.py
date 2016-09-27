@@ -192,6 +192,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     ('css', os.path.join(STATIC_ROOT, 'css')),
     ('js', os.path.join(STATIC_ROOT, 'js')),
+    ('fonts', os.path.join(STATIC_ROOT, 'fonts')),
 
     ('Photography', os.path.join(BASE_DIR, 'Photography/static')),
     ('SfccPro', os.path.join(BASE_DIR, 'SfccPro/static')),
