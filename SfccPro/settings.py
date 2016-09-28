@@ -197,6 +197,7 @@ STATICFILES_DIRS = [
     ('fonts', os.path.join(STATIC_ROOT, 'fonts')),
 
     ('Photography', os.path.join(BASE_DIR, 'Photography/static')),
+    ('Schedule', os.path.join(BASE_DIR, 'Schedule/static')),
     ('SfccPro', os.path.join(BASE_DIR, 'SfccPro/static')),
     ('SfccUser', os.path.join(BASE_DIR, 'SfccUser/static')),
 ]
