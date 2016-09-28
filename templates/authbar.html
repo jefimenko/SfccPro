@@ -19,7 +19,7 @@
     <div class="authentication">
       <ul class="nav navbar-nav">
         <li>
-          <span id="authentication-user-name-display">Logged in as <a href="">{{ request.user }}</a></span>
+          <span id="authentication-user-name-display">Logged in as <a href="{% url 'SfccUser.dashboard' %}">{{ request.user }}</a></span>
         </li>
 <!--         <li>
           <a class="authentication-links" href="">Edit profile</a>
