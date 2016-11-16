@@ -216,7 +216,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = email_secrets.TEMP_EMAIL_ADDRESS
-EMAIL_HOST_PASSWORD = email_secrets.TEMP_PASSWORD
+EMAIL_HOST_USER = email_secrets.SFCC_EMAIL_ADDRESS
+EMAIL_HOST_PASSWORD = email_secrets.SFCC_PASSWORD
 
 # Can I specify user/password during runtime per email sent?
