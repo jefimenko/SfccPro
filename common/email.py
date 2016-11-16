@@ -2,8 +2,9 @@ import smtplib
 
 
 def sendEmail(from_email_address, password, to_email_addresses, subject_line, message_body):
-    server = smtplib.SMTP(host='smtp.gmail.com', port=587)
-    server.starttls()
+    # Alternate port: 587
+    server = smtplib.SMTP_SSL(host='smtp.gmail.com', port=465)
+    server.ehlo()
 
     server.login(from_email_address, password)
 
@@ -14,3 +15,10 @@ def sendEmail(from_email_address, password, to_email_addresses, subject_line, me
     )
 
     server.quit()
+
+# Use twillio
+# TODO: get email seattlefcc.pro@gmail.com
+# TODO: get twillio to seattlefcc.pro@gmail.com
+def sendText(message_body):
+
+    pass
