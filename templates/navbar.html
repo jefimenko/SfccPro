@@ -1,6 +1,14 @@
 <nav id="navigation" class="navbar navbar-default navbar-fixed-bottom">
   <div class="navigation-container container-fluid">
 
+    {% if user.is_staff %}
+    <div id="navigation-photo-upload-button">
+      <a href="">
+        +Upload Photo
+      </a>
+    </div>
+    {% endif %}
+
     <div class="navigation">
       <ul class="nav navbar-nav">
         <li>

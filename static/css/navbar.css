@@ -4,6 +4,15 @@
   text-align: center;
 }
 
+#navigation-photo-upload-button {
+  float: left;
+
+  font-size: 1em;
+
+  margin-top: 17px;
+  margin-left: 20px;
+}
+
 .navigation-links {
   font-family: "Easy Street Alt EPS";
   font-size: 4em;
