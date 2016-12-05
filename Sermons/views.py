@@ -18,11 +18,10 @@ class Sermons(TemplateView):
         bucket = s3.get_bucket('seattlefcc-sermons')
 
         em_sermon_urls = [
-            os.path.basename(key.name)
-            # [
-            #     os.basename(key.name),
-            #     s3.generate_url(method='GET', bucket=bucket.name, key=key.name, expires_in=20000000 , force_http=True)
-            # ]
+            [
+                os.path.basename(key.name),
+                s3.generate_url(method='GET', bucket=bucket.name, key=key.name, expires_in=20000000 , force_http=True)
+            ]
             for key in bucket.list(prefix='em')
         ][1:]
 

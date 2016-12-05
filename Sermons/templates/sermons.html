@@ -14,10 +14,10 @@
 
 <div id="sermon-main-block">
 
-  {% for sermon_url in presigned_urls %}
+  {% for sermon_file_name, sermon_url in presigned_urls %}
   <div class="sermon-rows">
     <a class="sermon-links" href="{{ sermon_url }}">
-      {{ sermon_url }}
+      {{ sermon_file_name }}
     </a>
   </div>
   {% endfor %}
