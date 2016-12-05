@@ -5,7 +5,7 @@
 {% block style_block %}
 {{ block.super }}
 
-<link rel="stylesheet" type="text/css" href="{% static "Photography/css/sermons.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "Sermons/css/sermons.css" %}"/>
 
 {% endblock %}
 
@@ -14,10 +14,13 @@
 
 <div id="sermon-main-block">
 
-  {% for sermon_file_name, sermon_url in presigned_urls %}
+  {% for sermon_file_name, sermon_stream_url, sermon_download_url in presigned_urls %}
   <div class="sermons">
-    <a class="sermon-links" href="{{ sermon_url }}">
+    <a class="sermon-links" href="{{ sermon_stream_url }}">
       {{ sermon_file_name }}
+    </a>
+    <a class="sermon-download-links" href="{{ sermon_download_url }}" download="{{ sermon_file_name }}">
+      Download
     </a>
   </div>
   {% endfor %}
