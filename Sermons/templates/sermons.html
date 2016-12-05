@@ -1,0 +1,27 @@
+{% extends 'templates/layout.html' %}
+{% load static %}
+
+
+{% block style_block %}
+{{ block.super }}
+
+<link rel="stylesheet" type="text/css" href="{% static "Photography/css/sermons.css" %}"/>
+
+{% endblock %}
+
+
+{% block main_block %}
+
+<div id="sermon-main-block">
+
+  {% for sermon_url in presigned_urls %}
+  <div class="sermon-rows">
+    <a class="sermon-links" href="{{ sermon_url }}">
+      {{ sermon_url }}
+    </a>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}
