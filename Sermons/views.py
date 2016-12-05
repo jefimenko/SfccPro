@@ -16,11 +16,24 @@ class Sermons(TemplateView):
             aws_secret_access_key=aws_secrets.AWS_SECRET_ACCESS_KEY
         )
         bucket = s3.get_bucket('seattlefcc-sermons')
-
+        # import pdb; pdb.set_trace()
         em_sermon_urls = [
             [
                 os.path.basename(key.name),
-                s3.generate_url(method='GET', bucket=bucket.name, key=key.name, expires_in=20000000 , force_http=True)
+                s3.generate_url(
+                    method='GET',
+                    bucket=bucket.name,
+                    key=key.name,
+                    expires_in=20000000,
+                    force_http=True
+                ),
+                s3.generate_url(
+                    method='GET',
+                    bucket=bucket.name,
+                    key=key.name,
+                    expires_in=20000000,
+                    response_headers={'response-content-type': 'application/octet-stream'}
+                ),
             ]
             for key in bucket.list(prefix='em')
         ][1:]

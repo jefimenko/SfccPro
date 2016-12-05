@@ -1,3 +1,8 @@
+.btn {
+  border-radius: 0;
+  background-color: #cdcdcd;
+}
+
 .sermons {
   display: inline-block;
   margin: auto;
