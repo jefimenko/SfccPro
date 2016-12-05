@@ -1,0 +1,32 @@
+.sermons {
+  display: inline-block;
+  margin: auto;
+
+  width: 30%;
+
+  padding: 20px;
+}
+
+.sermon-links {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  width: 79%;
+
+  text-align: left;
+}
+
+.sermon-download-links{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  width: 20%;
+}
+
+#sermon-main-block {
+  width: 100%;
+
+  text-align:center;
+}
