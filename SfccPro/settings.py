@@ -198,6 +198,7 @@ STATICFILES_DIRS = [
 
     ('Photography', os.path.join(BASE_DIR, 'Photography/static')),
     ('Schedule', os.path.join(BASE_DIR, 'Schedule/static')),
+    ('Sermons', os.path.join(BASE_DIR, 'Sermons/static')),
     ('SfccPro', os.path.join(BASE_DIR, 'SfccPro/static')),
     ('SfccUser', os.path.join(BASE_DIR, 'SfccUser/static')),
 ]
