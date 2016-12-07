@@ -17,6 +17,7 @@ class Sermons(TemplateView):
         )
         bucket = s3.get_bucket('seattlefcc-sermons')
 
+        # TODO: sort, most recent first, assuming format yyyymmdd-<l>-...
         em_sermon_urls = [
             [
                 os.path.basename(key.name),
@@ -37,6 +38,8 @@ class Sermons(TemplateView):
             ]
             for key in bucket.list(prefix='em')
         ][1:]
+
+        em_sermon_urls.sort(reverse=True)
 
         return render(
             request,
