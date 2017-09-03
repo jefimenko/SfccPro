@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^photos/', include('Photography.urls')),
     url(r'^sermons/', include('Sermons.urls')),
     url(r'^dashboard/', include('SfccUser.urls')),
+    url(r'^documents/', include('Documents.urls')),
 ]
