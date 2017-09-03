@@ -5,7 +5,7 @@
 {% block style_block %}
 {{ block.super }}
 
-<link rel="stylesheet" type="text/css" href="{% static "Documents/css/document_list.css" %}"/>
+<link rel="stylesheet" type="text/css" href="{% static "Documents/css/documents_list.css" %}"/>
 
 {% endblock %}
 
@@ -19,7 +19,7 @@
     <a class="document-links" href="{{ document_stream_url }}">
       {{ document_name }}
     </a>
-    <a class="sermon-download-links btn" href="{{ document_download_url }}" download="{{ document_name }}">
+    <a class="document-download-links btn" href="{{ document_download_url }}" download="{{ document_name }}">
       Download
     </a>
   </div>
