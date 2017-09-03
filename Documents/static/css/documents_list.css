@@ -1,0 +1,47 @@
+.btn {
+  border-radius: 0;
+  background-color: #cdcdcd;
+}
+
+.sermons {
+  display: inline-block;
+  margin: auto;
+
+  width: 500px;
+
+  padding: 20px;
+}
+
+.sermon-links {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  width: 79%;
+
+  text-align: left;
+}
+
+.sermon-download-links{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  width: 20%;
+}
+
+#sermon-main-block {
+  width: 1005px;
+  margin: auto;
+
+  text-align:left;
+}
+
+@media screen and (max-width: 700px) {
+  #sermon-main-block {
+    width: 500px;
+    margin: auto;
+
+    text-align:left;
+  }
+}

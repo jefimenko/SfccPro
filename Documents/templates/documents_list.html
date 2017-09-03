@@ -1,0 +1,30 @@
+{% extends 'templates/layout.html' %}
+{% load static %}
+
+
+{% block style_block %}
+{{ block.super }}
+
+<link rel="stylesheet" type="text/css" href="{% static "Documents/css/document_list.css" %}"/>
+
+{% endblock %}
+
+
+{% block main_block %}
+
+<div id="document-list-main-block">
+
+  {% for document_name, document_stream_url, document_download_url in presigned_urls %}
+  <div class="documents">
+    <a class="document-links" href="{{ document_stream_url }}">
+      {{ document_name }}
+    </a>
+    <a class="sermon-download-links btn" href="{{ document_download_url }}" download="{{ document_name }}">
+      Download
+    </a>
+  </div>
+  {% endfor %}
+
+</div>
+
+{% endblock %}
